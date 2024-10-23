@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft Account Alert</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #4472c4;
+      font-size: 24px;
+    }
+    p {
+      font-size: 16px;
+      color: #555555;
+    }
+    .btn-report {
+      background-color: #4472c4;
+      color: #ffffff;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    .btn-report {
+    background-color: #4472c4;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  .btn-report:hover {
+    background-color: #5a8ad6; /* Slightly lighter shade for hover */
+  }
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #999999;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Microsoft Account Security Alert</h1>
+    <p>Dear {{.FirstName}},</p>
+<p>We detected several unsuccessful login attempts to your account from a location in Bogotá, Colombia. If you suspect that these attempts were made without your knowledge, please take immediate action.</p>
+<p>
+  <a class="btn-report" href="{{.URL}}">Report Suspicious Activity</a>
+</p>
+<p>If you recognize this activity, you can safely ignore this message.</p>
+
+    <br>
+    <p>Stay safe,</p>
+    <p>The Office 365 Team</p>
+    <p class="footer">© 2024 Microsoft Corporation. All rights reserved.</p>
+    <p class="footer">Office365 @ halo.ae | Privacy | Terms of Use</p>
+  </div>
+{{.Tracker}}</body>
+</html>
